@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+.vehicle-image {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: blue;
+}
+
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;  
+    justify-content: center; /* Center the vehicle items */  
+    padding: 0;
+    margin: 0 20px; /* Add some margin to the left and right */
+}
+
+.vehicle-list li {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    flex: 0 0 300px; /* Each vehicle item will take up 300px width */
+}
+
+@media (max-width: 700px) {
+    .vehicle-list li {
+        flex: 0 0 100%;
+    }
+}
+
+.vehicle-list h3, .vehicle-list p {
+    text-align: center;
+}
+
+.vehicle-list a {
+    display: block;
+    text-align: center;
+}
+
+.vehicle-list img {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,43 @@
+.vehicle-image {
+    width: 100%;
+    height: 250px;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: blue;
+}
+
+.vehicle-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;    
+}
+
+.vehicle-list li {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    flex: 1;
+}
+
+.vehicle-list h3, .vehicle-list p {
+    text-align: center;
+}
+
+.vehicle-list a {
+    display: block;
+    text-align: center;
+}
+
+.vehicle-list img {
+    display: block;
+    margin: 0 auto;
+}
