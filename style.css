@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-.vehicle-image {
-    width: 100%;
-}
-
 h1 {
     text-align: center;
     color: blue;
@@ -17,34 +13,35 @@ h1 {
     color: blue;
 }
 
+
 .vehicle-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     list-style: none;
-    gap: 20px;  
-    justify-content: center; /* Center the vehicle items */  
-    /*justify-content: stretch; /* Stretch the vehicle items to fill the available space */
-    flex-direction: row;
     padding: 20px;
     margin: 30px 20px; /* Add some margin to the left and right */
 }
 
 .vehicle-list li {
-    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
     padding: 20px ;
     border: 2px solid black;
     border-radius: 15px;
     box-shadow:5px 5px 10px black;
 }
-    /*
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px black;
-    flex: 0 0 300px; /* Each vehicle item will take up 300px width */
 
 .vehicle-list h3 {
     text-align: center;
+}
+
+.vehicle-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
 }
 
 .vehicle-description {
@@ -55,17 +52,19 @@ h1 {
 .vehicle-list a {
     display: block;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.vehicle-list img {
+
+.card-button {
     display: block;
-    margin: 0 auto;
+    margin: auto auto 0;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px black;
+    cursor: pointer;
 }
 
-
-
-@media (max-width: 700px) {
-    .vehicle-list li {
-        flex: 0 0 100%;
-    }
-}
